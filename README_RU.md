@@ -1,8 +1,8 @@
-# <img align="right" src="/Web/static/img/logo_shadow.png" alt="openvk" title="openvk" width="15%">OpenVK
+# <img align="right" src="/Web/static/img/logo_shadow.png" alt="furrvk" title="furrvk" width="15%">FurrVK
 
 _[English](README.md)_
 
-**OpenVK** — это попытка создать простую CMS, которая ~~косплеит~~ имитирует старый ВКонтакте. На данный момент, представленный здесь исходный код проекта пока не является стабильным.
+**FurrVK** — это попытка создать простую CMS, которая ~~косплеит~~ имитирует старый ВКонтакте. На данный момент, представленный здесь исходный код проекта пока не является стабильным.
 
 ВКонтакте принадлежит Павлу Дурову и VK Group.
 
@@ -10,19 +10,19 @@ _[English](README.md)_
 
 ## Когда выйдет релизная версия?
 
-Мы выпустим OpenVK, как только он будет готов. На данный момент Вы можете:
+Мы выпустим FurrVK, как только он будет готов. На данный момент Вы можете:
 * Склонировать master ветку репозитория командой `git clone` (используйте `git pull` для обновления)
-* Взять готовую сборку OpenVK из [GitHub Actions](https://nightly.link/openvk/archive/workflows/nightly/master/OpenVK%20Archive.zip)
+* Взять готовую сборку FurrVK из [GitHub Actions](https://nightly.link/openvk/archive/workflows/nightly/master/OpenVK%20Archive.zip)
 
 ## Инстанции
 
 Список инстанций находится в [нашей вики этого репозитория](https://github.com/openvk/openvk/wiki/Instances-(RU)).
 
-## Могу ли я создать свою собственную инстанцию OpenVK?
+## Могу ли я создать свою собственную инстанцию FurrVK?
 
 Да! И всегда пожалуйста.
 
-Однако, OpenVK использует Chandler Application Server. Это программное обеспечение требует расширений, которые могут быть не предоставлены вашим хостинг-провайдером (а именно, sodium и yaml. Эти расширения доступны на большинстве хостингов ISPManager).
+Однако, FurrVK использует Chandler Application Server. Это программное обеспечение требует расширений, которые могут быть не предоставлены вашим хостинг-провайдером (а именно, sodium и yaml. Эти расширения доступны на большинстве хостингов ISPManager).
 
 Если хотите, вы можете добавить вашу инстанцию в список выше, чтобы люди могли зарегистрироваться там.
 
@@ -38,7 +38,7 @@ _[English](README.md)_
 * Сервер должен поддерживать хотя бы MySQL 5.6, рекомендуется использовать MySQL 8.0+.
 * Поддержка для MySQL 4.1+ находится в процессе, а пока замените `utf8mb4` и `utf8mb4_unicode_520_ci` на `utf8` и `utf8_unicode_ci` в SQL-файлах, соответственно.
 
-3. Установите [commitcaptcha](https://github.com/openvk/commitcaptcha) и OpenVK в качестве расширений Chandler:
+3. Установите [commitcaptcha](https://github.com/openvk/commitcaptcha) и FurrVK в качестве расширений Chandler:
 
 ```bash
 git clone https://github.com/openvk/openvk /path/to/chandler/extensions/available/openvk
@@ -55,7 +55,7 @@ ln -s /path/to/chandler/extensions/available/openvk /path/to/chandler/extensions
 5. Импортируйте `install/init-static-db.sql` в **ту же базу данных**, в которую вы установили Chandler, и импортируйте все SQL файлы из папки `install/sqls` в **ту же базу данных**
 6. Импортируйте `install/init-event-db.sql` в **отдельную базу данных** (Яндекс.Clickhouse также может быть использован, настоятельно рекомендуется)
 7. Скопируйте `openvk-example.yml` в `openvk.yml` и измените параметры под свои нужды
-8. Запустите `composer install` в директории OpenVK
+8. Запустите `composer install` в директории FurrVK
 9. Запустите `composer install` в директории commitcaptcha
 10. Перейдите в `Web/static/js` и выполните `yarn install`
 11. Установите `openvk` в качестве корневого приложения в файле `chandler.yml`
@@ -71,9 +71,9 @@ ln -s /path/to/chandler/extensions/available/openvk /path/to/chandler/extensions
 # Установка в Docker/Kubernetes
 Подробные иструкции можно найти в `install/automated/docker/README.md` и `install/automated/kubernetes/README.md` соответственно.
 
-### Если мой сайт использует OpenVK, должен ли я публиковать его исходные тексты?
+### Если мой сайт использует FurrVK, должен ли я публиковать его исходные тексты?
 
-Это зависит от обстоятельств. Вы можете оставить исходные тексты при себе, если не планируете распространять бинарники вашего сайта. Если программное обеспечение вашего сайта должно распространяться, оно может оставаться не-OSS при условии, что OpenVK не используется в качестве основного приложения и не модифицируется. Если вы модифицировали OpenVK для своих нужд или ваша работа основана на нем и вы планируете ее распространять, то вы должны лицензировать ее на условиях любой совместимой с LGPL лицензии (например, OSL, GPL, LGPL и т.д.).
+Это зависит от обстоятельств. Вы можете оставить исходные тексты при себе, если не планируете распространять бинарники вашего сайта. Если программное обеспечение вашего сайта должно распространяться, оно может оставаться не-OSS при условии, что FurrVK не используется в качестве основного приложения и не модифицируется. Если вы модифицировали FurrVK для своих нужд или ваша работа основана на нем и вы планируете ее распространять, то вы должны лицензировать ее на условиях любой совместимой с LGPL лицензии (например, OSL, GPL, LGPL и т.д.).
 
 ## Где я могу получить помощь?
 
@@ -86,7 +86,7 @@ ln -s /path/to/chandler/extensions/available/openvk /path/to/chandler/extensions
 * [GitHub Discussions](https://github.com/openvk/openvk/discussions)
 * Чат в Matrix: #ovk:matrix.org
 
-**Внимание**: баг-трекер, форум, Telegram- и Matrix-чат являются публичными местами, и жалобы в OVK обслуживается волонтерами. Если вам нужно сообщить о чем-то, что не должно быть раскрыто широкой публике (например, сообщение об уязвимости), пожалуйста, свяжитесь с нами напрямую по этому адресу: **openvk [собачка] tutanota [точка] com**.
+**Внимание**: баг-трекер, форум, Telegram- и Matrix-чат являются публичными местами, и жалобы в FVK обслуживается волонтерами. Если вам нужно сообщить о чем-то, что не должно быть раскрыто широкой публике (например, сообщение об уязвимости), пожалуйста, свяжитесь с нами напрямую по этому адресу: **openvk [собачка] tutanota [точка] com**.
 
 <a href="https://codeberg.org/OpenVK/openvk">
     <img alt="Get it on Codeberg" src="https://codeberg.org/Codeberg/GetItOnCodeberg/media/branch/main/get-it-on-blue-on-white.png" height="60">
