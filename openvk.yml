@@ -136,7 +136,7 @@ openvk:
             database:
                 dsn: "mysql:unix_host=localhost;dbname=openvk_eventdb" # or unix_socket=/tmp/mysql.sock
                 user: "root"
-                password: "1"
+                password: ""
         notificationsBroker:
             enable: false
             kafka:
