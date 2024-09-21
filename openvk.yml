@@ -55,7 +55,7 @@ openvk:
         wall:
             christian: false
             anonymousPosting:
-                enable: true
+                enable: false
                 account: 4
             postSizes:
                 maxSize: 60000
