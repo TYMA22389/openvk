@@ -134,7 +134,7 @@ openvk:
         eventDB:
             enable: true
             database:
-                dsn: "mysql:unix_host=localhost;dbname=openvk_eventdb" # or unix_socket=/tmp/mysql.sock
+                dsn: "" # or unix_socket=/tmp/mysql.sock
                 user: "root"
                 password: ""
         notificationsBroker:
