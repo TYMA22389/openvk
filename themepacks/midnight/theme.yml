@@ -4,9 +4,9 @@ openvk_version: 0
 enabled: 1
 metadata:
     name:
-        _: "OpenVK Midnight"
-        en: "OpenVK Midnight"
-        ru: "OpenVK Midnight"
-        uk: "OpenVK Midnight"
+        _: "FurrVK Midnight"
+        en: "FurrVK Midnight"
+        ru: "FurrVK Midnight"
+        uk: "FurrVK Midnight"
     author: "Lumaeris"
-    description: "A dark theme for OpenVK"
+    description: "A dark theme for FurrVK"

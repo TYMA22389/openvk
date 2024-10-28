@@ -1,0 +1,145 @@
+openvk:
+    debug: true
+    appearance:
+        name: "FurrVK"
+        motd: "FurrVK, now work!"
+    
+    preferences:
+        femaleGenderPriority: true
+        nginxCacheTime: null
+        uploads:
+            disableLargeUploads: false
+            mode: "basic"
+            api:
+                maxFilesPerDomain: 10
+                maxFileSize: 99999999999999
+        shortcodes:
+            minLength: 3 # won't affect existing short urls or the ones set via admin panel
+            forbiddenNames:
+                - "index.php"
+        photos:
+            upgradeStructure: false
+            photoSaving: "quick"
+        videos:
+            disableUploading: false
+        apps:
+            withdrawTax: 8
+        security:
+            requireEmail: true
+            requirePhone: false
+            forcePhoneVerification: false
+            forceEmailVerification: true
+            forceStrongPassword: false
+            disablePasswordRestoring: false # turn this off if you have configured e-mail sending correctly
+            enableSu: true
+            rateLimits:
+                actions: 5
+                time: 20
+                maxViolations: 50
+                maxViolationsAge: 120
+                autoban: true
+        registration:
+            enable: true
+            disablingReason: ""
+        support:
+            supportName: "Бойкиссер"
+            adminAccount: 1 # Change this ok
+            fastAnswers:
+                - "Нам лень тут что то писать"
+                - "Нам лень тут что то писать"
+                - "Нам лень тут что то писать"
+        messages:
+            strict: false
+        music:
+            exposeOriginalURLs: true
+        wall:
+            christian: false
+            anonymousPosting:
+                enable: true
+                account: 9
+            postSizes:
+                maxSize: 60000
+                processingLimit: 3000
+                emojiProcessingLimit: 1000
+        commerce: true
+        susLinks:
+            warnings: true
+            showReason: true
+        maintenanceMode:
+            all: false
+            photos: false
+            videos: false
+            messenger: false
+            user: false
+            group: false
+            comment: false
+            gifts: false
+            apps: false
+            notes: false
+            notification: false
+            support: false
+            topics: false
+        ton:
+            enabled: true
+            address: "UQB7QRrjgkPlDzubzT4M0ntNkUADJf9CkvwyRehqKh2SwaUh"
+            testnet: true # Only for testing purposes.
+            rate: 0.02     # TONs per 1 coin
+            regex: "ovk=([0-9]+)"
+            hint: "ovk=$1"
+            # Please read docs to understand how to turn on automatic checking for new translations
+        menu:
+            links:
+                - name: "@left_menu_donate"
+                  url: "/donate"
+        about:
+            links:
+                - name: "Link caption"
+                  url: "https://example.org/"
+        adPoster:
+            enable: true
+            src: "https://furrvk.ru/blob_3b/3bba3b81591e59c4c1bcaaf8561f8ff64752b9b809a075e49f230a93f8758959b73d391f18cdaf342dd7416b3899f953fa7fe85a006b9b2234692c80247a0d34.jpeg"
+            caption: "Ну задонатьте"
+            link: "/donate"
+        bellsAndWhistles:
+            fartscroll: false
+            testLabel: false
+        defaultMobileTheme: ""
+        defaultFeaturePhoneTheme: ""
+        logs: true
+    
+    telemetry:
+        plausible:
+            enable: false
+            domain: ""
+            server: ""
+        piwik:
+            enable: false
+            container: ""
+            site: ""
+            layer: "dataLayer"
+        matomo:
+            enable: false
+            container: ""
+            site: ""
+    
+    credentials:
+        smsc:
+            enable: false
+            client: ""
+            secret: "SECRET_KEY_HERE"
+        telegram:
+            enable: false
+            token: "7823333869:AAFHBX0559mzLntHjlhRlXbxxdU_MMXnJtk"
+            helpdeskChat: "FurrVK"
+        eventDB:
+            enable: true
+            database:
+                dsn: "mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname=openvk_eventdb" # or unix_socket=/tmp/mysql.sock
+                user: "root"
+                password: "HelpikHelpik1854#"
+        notificationsBroker:
+            enable: false
+            kafka:
+                addr: "127.0.0.1"
+                port: 9092
+                topic: "OvkEvents"

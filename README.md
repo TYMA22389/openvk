@@ -1,8 +1,8 @@
-# <img align="right" src="/Web/static/img/logo_shadow.png" alt="openvk" title="openvk" width="15%">OpenVK
+# <img align="right" src="/Web/static/img/logo_shadow.png" alt="furrvk" title="furrvk" width="15%">FurrVK
 
 _[Русский](README_RU.md)_
 
-**OpenVK** is an attempt to create a simple CMS that ~~cosplays~~ imitates old VKontakte. Code provided here is not stable yet.
+**FurrVK** is an attempt to create a simple CMS that ~~cosplays~~ imitates old VKontakte. Code provided here is not stable yet.
 
 VKontakte belongs to Pavel Durov and VK Group.
 
@@ -10,19 +10,19 @@ To be honest, we don't know whether if it even works. However, this version is m
 
 ## When's the release?
 
-We will release OpenVK as soon as it's ready. As for now, you can:
+We will release FurrVK as soon as it's ready. As for now, you can:
 * `git clone` this repo's master branch (use `git pull` to update)
-* Grab a prebuilt OpenVK distro from [GitHub artifacts](https://nightly.link/openvk/archive/workflows/nightly/master/OpenVK%20Archive.zip)
+* Grab a prebuilt FurrVK distro from [GitHub artifacts](https://nightly.link/openvk/archive/workflows/nightly/master/OpenVK%20Archive.zip)
 
 ## Instances
 
 A list of instances can be found in [our wiki of this repository](https://github.com/openvk/openvk/wiki/Instances).
 
-## Can I create my own OpenVK instance?
+## Can I create my own FurrVK instance?
 
 Yes! And you are very welcome to.
 
-However, OVK makes use of Chandler Application Server. This software requires extensions, that may not be provided by your hosting provider (namely, sodium and yaml. these extensions are available on most of ISPManager hostings).
+However, FVK makes use of Chandler Application Server. This software requires extensions, that may not be provided by your hosting provider (namely, sodium and yaml. these extensions are available on most of ISPManager hostings).
 
 If you want, you can add your instance to the list above so that people can register there.
 
@@ -46,7 +46,7 @@ Here is our minimum hardware recommendation:
 * Server should be compatible with at least MySQL 5.6, MySQL 8.0+ is recommended.
 * Support for MySQL 4.1+ is WIP, replace `utf8mb4` and `utf8mb4_unicode_520_ci` with `utf8` and `utf8_unicode_ci` in SQLs.
 
-3. Install [commitcaptcha](https://github.com/openvk/commitcaptcha) and OpenVK as Chandler extensions like this:
+3. Install [commitcaptcha](https://github.com/openvk/commitcaptcha) and FurrVK as Chandler extensions like this:
 
 ```bash
 git clone https://github.com/openvk/openvk /path/to/chandler/extensions/available/openvk
@@ -63,7 +63,7 @@ ln -s /path/to/chandler/extensions/available/openvk /path/to/chandler/extensions
 5. Import `install/init-static-db.sql` to the **same database** you installed Chandler to and import all sqls from `install/sqls` to the **same database**
 6. Import `install/init-event-db.sql` to a **separate database** (Yandex.Clickhouse can also be used, highly recommended)
 7. Copy `openvk-example.yml` to `openvk.yml` and change options to your liking
-8. Run `composer install` in OpenVK directory
+8. Run `composer install` in FurrVK directory
 9. Run `composer install` in commitcaptcha directory
 10. Move to `Web/static/js` and execute `yarn install`
 11. Set `openvk` as your root app in `chandler.yml`
@@ -79,7 +79,7 @@ Once you are done, you can login as a system administrator on the network itself
 ### Looking for Docker or Kubernetes deployment?
 See `install/automated/docker/README.md` and `install/automated/kubernetes/README.md` for Docker and Kubernetes deployment instructions.
 
-### If my website uses OpenVK, should I release its sources?
+### If my website uses FurrVK, should I release its sources?
 
 It depends. You can keep the sources to yourself if you do not plan to distribute your website binaries. If your website software must be distributed, it can stay non-OSS provided the OpenVK is not used as a primary application and is not modified. If you modified OpenVK for your needs or your work is based on it and you are planning to redistribute this, then you should license it under terms of any LGPL-compatible license (like OSL, GPL, LGPL etc).
 

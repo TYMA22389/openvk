@@ -4,9 +4,9 @@ openvk_version: 0
 enabled: 1
 metadata:
     name:
-        _: "OpenVK Modern"
-        en: "OpenVK Modern"
-        ru: "OpenVK Modern"
-        uk: "OpenVK Modern"
+        _: "FurrVK Modern"
+        en: "FurrVK Modern"
+        ru: "FurrVK Modern"
+        uk: "FurrVK Modern"
     author: "Mikita Wiśniewski (rudzik8)"
-    description: "OpenVK theme in modern style"
+    description: "FurrVK theme in modern style"
