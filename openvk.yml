@@ -25,12 +25,12 @@ openvk:
         apps:
             withdrawTax: 8
         security:
-            requireEmail: true
+            requireEmail: false
             requirePhone: false
             forcePhoneVerification: false
-            forceEmailVerification: true
+            forceEmailVerification: false
             forceStrongPassword: false
-            disablePasswordRestoring: false # turn this off if you have configured e-mail sending correctly
+            disablePasswordRestoring: true # turn this off if you have configured e-mail sending correctly
             enableSu: true
             rateLimits:
                 actions: 5
@@ -96,8 +96,8 @@ openvk:
                 - name: "Link caption"
                   url: "https://example.org/"
         adPoster:
-            enable: true
-            src: "https://furrvk.ru/blob_3b/3bba3b81591e59c4c1bcaaf8561f8ff64752b9b809a075e49f230a93f8758959b73d391f18cdaf342dd7416b3899f953fa7fe85a006b9b2234692c80247a0d34.jpeg"
+            enable: false
+            src: ""
             caption: "Ну задонатьте"
             link: "/donate"
         bellsAndWhistles:
@@ -129,14 +129,14 @@ openvk:
             secret: "SECRET_KEY_HERE"
         telegram:
             enable: false
-            token: "7823333869:AAFHBX0559mzLntHjlhRlXbxxdU_MMXnJtk"
+            token: "Lets not leak token ok?"
             helpdeskChat: "FurrVK"
         eventDB:
             enable: true
             database:
                 dsn: "mysql:unix_socket=/var/lib/mysql/mysql.sock;dbname=openvk_eventdb" # or unix_socket=/tmp/mysql.sock
                 user: "root"
-                password: "HelpikHelpik1854#"
+                password: "Lets not leak password ok?"
         notificationsBroker:
             enable: false
             kafka:
